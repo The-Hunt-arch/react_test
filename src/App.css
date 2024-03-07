@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#new-btn{
+  background-color: violet;
+  color: #fff;
+  transition: transform 0.5s ease;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transform-origin: right center; /* set the origin of the transform to the right edge of the button */
+
+}
+
+#new-btn:hover{
+  background-color: rgb(58, 156, 195);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+
+  background-position: left bottom;
+  animation: fold 1s forwards;
+  
+}
+
+@keyframes fold {
+  0% {
+    transform: rotateX(0) scaleY(1); /* start with the button in its original position and size */
+  }
+  50% {
+    transform: rotateX(90deg) scaleY(0); /* rotate the button 90 degrees around the x-axis and scale it vertically to zero */
+  }
+  100% {
+    transform: rotateX(90deg) scaleY(0); /* keep the button rotated and scaled to zero after the animation ends */
+  }
+}
